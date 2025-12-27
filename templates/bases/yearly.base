@@ -1,6 +1,8 @@
 properties:
   file.name:
     displayName: File
+  categories:
+    displayName: Categories
   note.created:
     displayName: Date
   note.status:
@@ -15,11 +17,12 @@ views:
     order:
       - created
       - file.name
+      - categories
       - status
     sort:
       - property: created
         direction: DESC
     columnSize:
       note.created: 150
-      file.name: 400
+      file.name: 336
       note.status: 100

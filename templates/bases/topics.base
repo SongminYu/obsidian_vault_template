@@ -5,24 +5,19 @@ properties:
     displayName: Filename
   categories:
     displayName: Categories
-  author:
-    displayName: Author
 views:
   - type: table
     name: All
     filters:
       and:
         - list(topics).contains(link(this.file.path))
+        - '!file.path.contains("templates/")'
     order:
       - created
       - file.name
       - categories
-      - author
     sort:
       - property: created
         direction: DESC
     columnSize:
-      created: 150
-      file.name: 300
-      categories: 120
-      author: 120
+      file.name: 379

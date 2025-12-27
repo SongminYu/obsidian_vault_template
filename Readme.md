@@ -21,24 +21,27 @@ Here is a quick overview of the folders and what they do:
 .
 ├── files/                 # THE POOL. Almost all your notes live here flatly.
 ├── journals/              # Yearly aggregations (e.g., 2025.md).
-├── references/            # THE INDEX. Contains the files for topics and categories.
+├── index/                 # THE INDEX. Contains the files for topics and categories.
 ├── templates/             # Templates for creating new notes.
-│   ├── bases/             # Defines the "Views" (tables) used in references.
+│   ├── bases/             # Defines the "Views" (tables).
 │   ├── daily_template     # For daily streams of thought.
 │   ├── note_template      # For standard atomic notes.
 │   ├── post_template      # For drafting content to publish.
-│   └── clipping_template  # For articles/content saved from the web.
-└── attachments/           # Drag & drop images here; they auto-save to this folder.
+│   ├── clipping_template  # For articles/content saved from the web.
+│   └── index_*_template   # For creating new Index pages.
+└── attachments/           # Drag & drop images here.
 ```
 
 ### Differences from the Original
 
-- **Simplified folder structure**: Removed some folders and flattened the hierarchy.
-- **Snake_case naming**: All file and folder names use lowercase with underscores (e.g., `deep_work` instead of `Deep Work`).
-- **Unified reference files**: Removed the distinction between "categories" and "topics", i.e. "categories" are not "tags" in Obsidian anymore.
-- **Fewer templates**: Kept only a few templates (`note`, `daily`, `post`, `clipping`) that I would start with.
+- **Folder Structure**: Flattened hierarchy with a single `files/` pool for content and an `index/` folder for connections.
+- **Naming Convention**: More `snake_case` folder and file names are used.
+- **Indexing Logic**: Distinct semantic separation between **Category** (Metadata) and **Topic** (Content association), each with dedicated templates to visualize the connections.
+- **Templates**: A curated set of templates for daily use, including the dynamic `index_` templates.
 
 ## How to continue
 
-You can download this repository, open it with Obsidian, and click around the links to experience the flexibility of this system. However, I highly recommend watching the video mentioned above. It provides a step-by-step walkthrough that is easy to follow and covers the philosophy from the blog, which can be a bit brief on its own. After watching, come back and explore this vault again—I believe you'll gain a deeper understanding of how the components work together and how to effectively create new notes, topics, and categories.
+You can download this repository, open it with Obsidian, and click around the links to experience the flexibility of this system. However, I highly recommend watching the video mentioned above. It provides a step-by-step walkthrough that covers the philosophy from the blog, which can be a bit brief on its own.
+
+After watching, come back and read the [[Detailed Guide - Obsidian Vault Design & Usage]] included in this vault. Although the practice here differs slightly from the video, you will find it easy to pick up since you understand the underlying philosophy. I believe you'll gain a deeper understanding of how the components work together and how to effectively create new notes, topics, and categories.
 

@@ -5,24 +5,21 @@ properties:
     displayName: Filename
   categories:
     displayName: Categories
-  author:
-    displayName: Author
-  topics:
-    displayName: Topics
 views:
   - type: table
     name: Backlinks
     filters:
       and:
         - file.hasLink(this)
+        - '!file.path.contains("templates/")'
+        - "!list(topics).contains(link(this.file.path))"
+        - "!list(categories).contains(link(this.file.path))"
     order:
       - created
       - file.name
       - categories
-      - author
-      - topics
     sort:
       - property: created
         direction: DESC
     columnSize:
-      file.name: 205
+      file.name: 376
